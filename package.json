@@ -1,0 +1,40 @@
+{
+  "name": "icofy",
+  "version": "1.0.0",
+  "description": "🎨 Icofy - AI-powered mobile app icon generator for iOS & Android for FREE",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "icofy": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test:watch": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.8.0",
+  "devDependencies": {
+    "@types/conf": "^3.0.3",
+    "@types/deepai": "^1.0.3",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.3.0",
+    "@types/signale": "^1.4.7",
+    "jest": "^30.0.5",
+    "signale": "^1.4.0",
+    "ts-jest": "^29.4.1",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "chalk": "^5.6.0",
+    "commander": "^14.0.0",
+    "conf": "^14.0.0",
+    "figlet": "^1.8.2",
+    "gradient-string": "^3.0.0",
+    "inquirer": "^12.9.3",
+    "ora": "^8.2.0"
+  }
+}

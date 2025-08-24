@@ -1,0 +1,45 @@
+# Source files
+src/
+bin/
+
+# TypeScript
+*.ts
+*.tsx
+
+# Build output will be included (dist/)
+# dist/
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+
+# Configs and tooling (not needed in npm package)
+*.json
+!.npmignore
+!.package.json
+!.README.md
+!.LICENSE
+!.VERSION
+
+# IDE / Editor files
+.vscode/
+.idea/
+
+# Environment files
+.env
+.env.*
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Husky / pre-commit hooks
+.husky/
+
+# CI/CD configs
+.travis.yml
+.github/
+.circleci/

@@ -1,0 +1,20 @@
+{
+  "git": {
+    "commitMessage": "✨ Release v${version} 🎉",
+    "tagName": "v${version} 🚀",
+    "requireCleanWorkingDir": true,
+    "requireBranch": "main"
+  },
+  "github": {
+    "release": true,
+    "releaseName": "✨ v${version} 🎉",
+    "assets": ["dist/**/*"]
+  },
+  "npm": {
+    "publish": false
+  },
+  "hooks": {
+    "before:init": ["npm run build"],
+    "after:bump": "echo '${version}' > VERSION"
+  }
+}
