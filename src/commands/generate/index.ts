@@ -1,14 +1,12 @@
 import { Command } from 'commander';
-
 import inquirer from 'inquirer';
 import fs from 'fs';
+import path from 'path';
 import ora from 'ora';
 import config from '../../base/config.base.js';
-
 import { CliConfig, INITIAL_PROMPT } from '../../constants/index.js';
 import { createLogoPrompt } from '../../utils/createPrompt.js';
 import { generateImage } from '../../core/fetch.js';
-import type { SignaleOptions } from 'signale';
 import _signale from 'signale';
 
 const Signale = _signale.Signale;
@@ -25,14 +23,13 @@ const signale = new Signale({
 
 export const generateCommand = new Command('generate')
   .description('🎨 Generate a stunning mobile app icon using AI')
-  .action(async () => {
+  .action(async (option) => {
     const apiKey = config.get(CliConfig.AuthStorageCommandName);
     if (!apiKey) {
       signale.warn('No API key found! 🔐 Please run `icofy auth` first.');
       return;
     }
 
-    // Ask user for logo description
     const { description } = await inquirer.prompt([
       {
         type: 'input',
@@ -42,12 +39,14 @@ export const generateCommand = new Command('generate')
       },
     ]);
 
-    const userPrompt = createLogoPrompt(description);
+    const userPrompt = createLogoPrompt<string>(description as string);
     const finalPrompt = `${INITIAL_PROMPT}\nUser request: ${userPrompt}`;
     const spinner = ora('🖌️ Generating your logo, please wait...').start();
+
     try {
       const form = new FormData();
       form.append('prompt', finalPrompt);
+
       const response = await generateImage({
         apiKey,
         formData: form,
@@ -58,10 +57,29 @@ export const generateCommand = new Command('generate')
       }
 
       const buffer = Buffer.from(await response.arrayBuffer());
-      const fileName = 'icofy-logo.png';
-      fs.writeFileSync(fileName, buffer);
+      spinner.succeed('🎉 Logo generated successfully!');
 
-      spinner.succeed(`🎉 Logo generated successfully! Saved as ${fileName}`);
+      // Ask user for custom file name
+      const { fileNameInput } = await inquirer.prompt([
+        {
+          type: 'input',
+          name: 'fileNameInput',
+          message: '📂 What should we name your logo file (without extension)?',
+          default: 'icofy-logo',
+          validate: (input) => input.trim().length > 0 || 'File name cannot be empty.',
+        },
+      ]);
+
+      // Create 'icofy' folder if it doesn't exist
+      const outputDir = path.resolve(process.cwd(), 'icofy');
+      if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+      }
+
+      const finalFilePath = path.join(outputDir, `${fileNameInput}.png`);
+      fs.writeFileSync(finalFilePath, buffer);
+
+      signale.success(`✅ Saved as ${finalFilePath}`);
       signale.star('✨ Tip: Open the file to preview your new app icon!');
     } catch (err) {
       spinner.fail('❌ Failed to generate logo.');
