@@ -108,7 +108,7 @@ pnpm add -g rn-icofy
 
 ```bash
 # 1️⃣ Authenticate (set your API key)
-icofy auth
+icofy configure
 
 # 2️⃣ Generate a stunning new app icon
 icofy generate
