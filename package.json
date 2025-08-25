@@ -4,6 +4,7 @@
   "description": "🎨 Icofy - AI-powered mobile app icon generator for iOS & Android for FREE",
   "main": "index.js",
   "type": "module",
+  "repository": "https://github.com/rit3zh/icofy",
   "bin": {
     "icofy": "./dist/bin/cli.js"
   },
