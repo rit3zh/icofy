@@ -11,6 +11,7 @@ bin/
 
 # Node modules
 node_modules/
+icofy/
 
 # Logs
 *.log

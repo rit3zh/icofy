@@ -82,11 +82,11 @@ You need an API key from Clipdrop to use Icofy:
   </thead>
   <tbody>
     <tr>
-      <td align="center"><img src="./icofy/alarm-clock.png" alt="Icon 1" width="120"/></td>
-      <td align="center"><img src="./icofy/food-app.png" alt="Icon 2" width="120"/></td>
-      <td align="center"><img src="./icofy/meditation-app.png" alt="Icon 3" width="120"/></td>
-      <td align="center"><img src="./icofy/social-media-new.png" alt="Icon 4" width="120"/></td>
-      <td align="center"><img src="./icofy/fitness-new.png" alt="Icon 5" width="120"/></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/alarm-clock.png" alt="Icon 1" width="120"/></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/food-app.png" alt="Icon 2" width="120"/></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/meditation-app.png" alt="Icon 3" width="120"/></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/social-media-new.png" alt="Icon 4" width="120"/></td>
+      <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/fitness-new.png" alt="Icon 5" width="120"/></td>
     </tr>
   </tbody>
 </table>
@@ -102,10 +102,10 @@ You need an API key from Clipdrop to use Icofy:
 
 ```bash
 # Using npm
-npm install -g icofy
+npm install -g rn-icofy
 
 # Or using pnpm
-pnpm add -g icofy
+pnpm add -g rn-icofy
 ```
 
 ---
