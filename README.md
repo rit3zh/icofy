@@ -13,10 +13,6 @@
 
   <!-- Quick CTA -->
   <p>
-    <a href="#-installation" style="text-decoration:none;">
-      <img alt="Install" src="https://img.shields.io/badge/Install%20Now-npm%20i%20-g%20icofy-334155">
-    </a>
-    &nbsp;
     <a href="#-cli-commands" style="text-decoration:none;">
       <img alt="Usage" src="https://img.shields.io/badge/Usage-icofy%20generate-1f2937">
     </a>
