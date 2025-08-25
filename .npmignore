@@ -1,5 +1,5 @@
 # Source files
-src/
+/src/
 bin/
 
 # TypeScript
@@ -8,6 +8,10 @@ bin/
 
 # Build output will be included (dist/)
 # dist/
+
+!dist/src/
+
+!dist/
 
 # Node modules
 node_modules/
