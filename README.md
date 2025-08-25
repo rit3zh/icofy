@@ -91,10 +91,6 @@ You need an API key from Clipdrop to use Icofy:
   </tbody>
 </table>
 
-<p align="center">
-  <em>Replace with your real generated icons for maximum impact.</em>
-</p>
-
 ---
 
 <!-- Install -->
