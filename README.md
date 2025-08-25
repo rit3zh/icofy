@@ -74,6 +74,7 @@ You need an API key from Clipdrop to use Icofy:
       <th align="center">Preview</th>
       <th align="center">Preview</th>
       <th align="center">Preview</th>
+      <th align="center">Preview</th>
     </tr>
   </thead>
   <tbody>
@@ -83,11 +84,10 @@ You need an API key from Clipdrop to use Icofy:
       <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/meditation-app.png" alt="Icon 3" width="120"/></td>
       <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/social-media-new.png" alt="Icon 4" width="120"/></td>
       <td align="center"><img src="https://raw.githubusercontent.com/rit3zh/icofy/main/icofy/fitness-new.png" alt="Icon 5" width="120"/></td>
+      <td align="center"><img src="https://github.com/user-attachments/assets/fb90bd0f-3787-4fae-94b8-4c2f09745da3" alt="Icon 5" width="120"/></td>
     </tr>
   </tbody>
 </table>
-
----
 
 <!-- Install -->
 <h2 id="-installation">📦 Installation</h2>
