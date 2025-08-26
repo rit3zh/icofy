@@ -37,7 +37,7 @@
   <li>Generate <strong>polished, high-quality app icons</strong> for iOS &amp; Android</li>
   <li>Powered by <a href="https://clipdrop.co/apis/docs/text-to-image" target="_blank"><strong>Clipdrop Text-to-Image API</strong></a></li>
   <li>Support for <strong>custom prompts</strong> – bring your app idea to life</li>
-  <li>Secure API key management with <code>icofy auth</code></li>
+  <li>Secure API key management with <code>icofy configure</code></li>
   <li>Fun and interactive CLI experience</li>
   <li>Super <strong>fast &amp; simple</strong> – just one command!</li>
 </ul>
@@ -56,7 +56,7 @@ You need an API key from Clipdrop to use Icofy:
   <li>Go to <a href="https://clipdrop.co/apis" target="_blank"><strong>Clipdrop API Dashboard</strong></a></li>
   <li>Create an account or log in</li>
   <li>Copy your API key</li>
-  <li>Run <code>icofy auth</code> and paste the key</li>
+  <li>Run <code>icofy configure</code> and paste the key</li>
 </ol>
 
 ---
